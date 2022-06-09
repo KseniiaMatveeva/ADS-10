@@ -44,13 +44,16 @@ class Tree {
     }
     if (root->value != '*')
       sim += root->value;
-    for (size_t l = 0; l < root->znach.size(); l++)
+   size_t l = 0;
+   while (l < root->znach.size()) {
       permss(root->znach[l], sim);
+      l++;
+    }
   }
 
  public:
     std::string operator[](int a) const {
-      if (a >= perms.size())
+      if (perms.size() <= a)
         return "";
       return perms[a];
     }
