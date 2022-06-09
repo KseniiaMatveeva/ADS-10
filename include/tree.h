@@ -1,6 +1,9 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
+#include <string>
+#include <vector>
+
 class Tree {
  private:
   struct Node {
@@ -8,7 +11,7 @@ class Tree {
   std::vector<Node*> znach;
   };
   Node* root;
-  
+
   void newtree(Node* root, std::vector<char> vet) {
     if (!vet.size())
       return;
@@ -31,9 +34,9 @@ class Tree {
       c++;
     }
   }
-  
+
   std::vector<std::string> perms;
-  
+
   void permss(Node* root, std::string sim = "") {
     if (!root->znach.size()) {
       sim = sim + root->value;
