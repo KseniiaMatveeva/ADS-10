@@ -42,10 +42,11 @@ class Tree {
       sim = sim + root->value;
       perms.push_back(sim);
     }
-    if (root->value != '*')
+    if (root->value != '*') {
       sim += root->value;
-   size_t l = 0;
-   while (l < root->znach.size()) {
+    }
+    size_t l = 0;
+    while (l < root->znach.size()) {
       permss(root->znach[l], sim);
       l++;
     }
