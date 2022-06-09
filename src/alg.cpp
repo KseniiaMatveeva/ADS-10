@@ -10,7 +10,7 @@ std::vector<char> getPerm(const Tree& tree, int n) {
   std::string restree = tree[n - 1];
   std::vector<char> perms;
   for (int i = 0; i < restree.length(); i++) {
-    perms.push_back(origin[i]);
+    perms.push_back(restree[i]);
   }
   return perms;
 }
