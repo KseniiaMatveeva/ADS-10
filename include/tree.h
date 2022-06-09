@@ -49,7 +49,7 @@ class Tree {
   }
 
  public:
-    std::string operator[](int l) const {
+    std::string operator[](int a) const {
       if (a >= perms.size())
         return "";
       return perms[a];
