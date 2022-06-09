@@ -16,7 +16,7 @@ class Tree {
     if (!vet.size())
       return;
     if (root->value != '*') {
-      for (auto a = vet.begin(); a != vet.end(); k++)
+      for (auto a = vet.begin(); a != vet.end(); a++)
         if (*a == root->value) {
           vet.erase(a);
           break;
